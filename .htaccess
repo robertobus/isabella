@@ -1,0 +1,15 @@
+# Do not remove this line or mod_rewrite rules and search engine friendly URLs will stop working
+#RewriteBase /
+
+# Cambiar sudominio.com por su nombre de dominio
+# Cambiar 'subdirectory' por el nombre del subdirectorio que quiere usar
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^(isabella.)?fbsolutions.xyz$
+RewriteCond %{REQUEST_URI} !^/public/
+# No cambiar estas lineas.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /public/$1
+# followed by / then the main file for your site, index.php, index.html, etc.
+RewriteCond %{HTTP_HOST} ^(isabella.)?fbsolutions.xyz$
+RewriteRule ^(/)?$ public/index.php [L]

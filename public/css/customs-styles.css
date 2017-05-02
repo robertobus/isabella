@@ -1,0 +1,12 @@
+.select_custom_highlight_red {
+    color: #e74c3c;
+    font-weight: bolder;
+    font-size: 18px;
+    padding: 0 0 0 10px;
+}
+
+.select_custom_highlight_red option {
+    font-size: 14px;
+    padding: 6px 12px;
+
+}
